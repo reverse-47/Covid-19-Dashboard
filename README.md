@@ -1,2 +1,2 @@
-# Covid-19-Dashboard
-全球疫情实时监控可视化平台|同济大学2022物联网应用概论课程项目
+# covid-19-china
+python web flask 全球疫情可视化开发

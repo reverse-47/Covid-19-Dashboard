@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+<title>Covid19Map</title>
+
+<script src="../static/js/jquery.min.js"></script>
+<script src="../static/js/echarts.min.js"></script>
+<script src="../static/js/controller.js"> </script>
+<script src="../static/js/country/china/china.js"></script>
+<!-- <script src="../static/js/world.js"></script> -->
+<link href="../static/css/main.css" rel="stylesheet"/>
+</head>
+
+<body>
+  <div id="gyroContain">
+    <div class="top">
+      <div class="title">全球疫情地图</div>
+      <div id="tim"></div>
+      <div class="option">
+        <button class="btn_china">中国</button>
+      </div>
+      <button class="btn_global">全球</button>
+      <div id="mqtt_txt">a</div>
+    </div>
+    <div class="left">
+      <div id="txt">全国累计</div></br>
+      <div class="confirm_num" id="con_confirm_num"></div>
+      <div class="confirm_num" id="pro_confirm_num"></div>
+      <div class="suspect_num" id="con_suspect_num"></div>
+      <div class="suspect_num" id="pro_suspect_num"></div>
+      <div class="confirm">累计确诊</div>
+      <div class="suspect">剩余疑似</div>
+      <div class="cure_num" id="con_cure_num"></div>
+      <div class="cure_num" id="pro_cure_num"></div>
+      <div class="dead_num" id="con_dead_num"></div>
+      <div class="dead_num" id="pro_dead_num"></div>
+      <div class="cure">累计治愈</div>
+      <div class="dead">累计死亡</div>
+      <div class="fenbu">地区分布</div>
+      <div class="province_table">
+        <table id="tab_country">
+          <thead>
+            <tr style="text-align: left;">
+              <th>省份</th>
+              <th>确诊</th>
+              <th>疑似</th>
+              <th>治愈</th>
+              <th>死亡</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+        <table id="tab_province">
+          <thead>
+            <tr style="text-align: left;">
+              <th>市</th>
+              <th>确诊</th>
+              <th>疑似</th>
+              <th>治愈</th>
+              <th>死亡</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+      </div>
+      <div class="right">
+        <div id="right-chart" style="width:300px; height:614px;"></div>
+      </div>
+    <div class="center">
+      <div class="backdiv">
+        <button id="back"></button>
+      </div>
+      <div class="refreshdiv">
+        <button id="refresh_china"></button>
+        <button id="refresh_province"></button>
+      </div>
+      <div id="china-map"></div>
+      <!-- <div id="world-map"></div> -->
+    </div>
+    <div class="bottom">
+      <div id="bottom-chart" style="width:1100px; height:300px; position: absolute;"></div>
+      <!-- style="width:500px; height:500px" -->
+    </div>
+    <script src="../static/js/ec_center_china.js"></script>
+    <!-- <script src="../static/js/ec_center_global.js"></script> -->
+  </div>
+</body>
+</html>
